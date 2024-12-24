@@ -3,10 +3,10 @@ name: Node.js CI
 on:
   push:
     branches:
-      - main  # Trigger workflow on push to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Trigger workflow on pull requests targeting the main branch
+      - main
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18' # Update to Node.js 18 or higher
 
       - name: Install dependencies
         run: |
